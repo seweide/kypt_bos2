@@ -1,0 +1,37 @@
+mybatis-plus.configuration.log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.40.220.244:8848
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbcUrl: wahjWI+yAdapAKQokEMJnT9amWuzBc9sP3ZzWMZnteHXlY5YivbHVByDTLsPaPUx4fsHj0eGFzm21xvbSALIq3e73TTg6iwmOt1GpgQluHBYtghOLLied969PvmcQxuir+w88d7dLGEEiKejuCnKv3N6CXlEq6XkBE899aRBlJhiO9d5/x1WQDTFMqIsYyaW
+    url: wahjWI+yAdapAKQokEMJnT9amWuzBc9sP3ZzWMZnteHXlY5YivbHVByDTLsPaPUx4fsHj0eGFzm21xvbSALIq3e73TTg6iwmOt1GpgQluHBYtghOLLied969PvmcQxuir+w88d7dLGEEiKejuCnKv3N6CXlEq6XkBE899aRBlJhiO9d5/x1WQDTFMqIsYyaW
+    username: sbYI3C5tYesG5t0n0gat4g==
+    password: O00fPj9NzkdjSY+r3Xa7HQ==
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 15
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: DatebookHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+      connection-init-sql: SET NAMES utf8mb4 COLLATE UTF8MB4_UNICODE_CI
+#  redis:
+#    host: 172.16.32.241
+#    port: 6379
+#    database: 2
+#    timeout: 5000ms
+
+#七牛配置
+qiniu:
+  access-key: xxx
+  secret-key: xxx
+  call-back-url: https://demoapi.liangyihui.net/api/pub/qiniucallback
+  bucket:
+    portrait: test
+    portrait.url: https://broadcast.liangyihui.net/

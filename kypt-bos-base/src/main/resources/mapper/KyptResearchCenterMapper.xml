@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.liangyihui.manager.kypt.bos.mapper.KyptResearchCenterMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.liangyihui.manager.kypt.bos.entity.KyptResearchCenter">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="credit_code" property="creditCode" />
+        <result column="logo" property="logo" />
+        <result column="country" property="country" />
+        <result column="prov" property="prov" />
+        <result column="city" property="city" />
+        <result column="level" property="level" />
+        <result column="status" property="status" />
+        <result column="is_settled" property="isSettled" />
+        <result column="is_quick_start" property="isQuickStart" />
+        <result column="center_type" property="centerType" />
+        <result column="advantage" property="advantage" />
+        <result column="sort" property="sort" />
+        <result column="is_consult" property="isConsult" />
+        <result column="profile" property="profile" />
+        <result column="address" property="address" />
+        <result column="tel" property="tel" />
+        <result column="website" property="website" />
+        <result column="ge_has_experience" property="geHasExperience" />
+        <result column="ge_linkman" property="geLinkman" />
+        <result column="ge_position" property="gePosition" />
+        <result column="ge_tel" property="geTel" />
+        <result column="ge_email" property="geEmail" />
+        <result column="ge_address" property="geAddress" />
+        <result column="ge_charge" property="geCharge" />
+        <result column="ge_can_deliver" property="geCanDeliver" />
+        <result column="ge_required_time" property="geRequiredTime" />
+        <result column="or_address" property="orAddress" />
+        <result column="or_reception_time" property="orReceptionTime" />
+        <result column="or_tel" property="orTel" />
+        <result column="or_email" property="orEmail" />
+        <result column="or_fax" property="orFax" />
+        <result column="or_project_deliver_url" property="orProjectDeliverUrl" />
+        <result column="or_undertaking_requirement" property="orUndertakingRequirement" />
+        <result column="or_website" property="orWebsite" />
+        <result column="or_qualification" property="orQualification" />
+        <result column="or_profile" property="orProfile" />
+        <result column="or_storage_cost_year" property="orStorageCostYear" />
+        <result column="or_special_requirement" property="orSpecialRequirement" />
+        <result column="or_contract_flow" property="orContractFlow" />
+        <result column="or_contract_required_time" property="orContractRequiredTime" />
+        <result column="or_billed_by" property="orBilledBy" />
+        <result column="or_account" property="orAccount" />
+        <result column="or_bank" property="orBank" />
+        <result column="or_branch" property="orBranch" />
+        <result column="or_urban_clearing_bank_no" property="orUrbanClearingBankNo" />
+        <result column="or_suburban_clearing_bank_no" property="orSuburbanClearingBankNo" />
+        <result column="or_other_requirement" property="orOtherRequirement" />
+        <result column="has_ethics_committee" property="hasEthicsCommittee" />
+        <result column="ec_address" property="ecAddress" />
+        <result column="ec_reception_time" property="ecReceptionTime" />
+        <result column="ec_tel" property="ecTel" />
+        <result column="ec_email" property="ecEmail" />
+        <result column="ec_fax" property="ecFax" />
+        <result column="ec_project_deliver_url" property="ecProjectDeliverUrl" />
+        <result column="ec_ethics_deliver_url" property="ecEthicsDeliverUrl" />
+        <result column="ec_accept_center_ethics" property="ecAcceptCenterEthics" />
+        <result column="ec_website" property="ecWebsite" />
+        <result column="ec_deliver_need_item" property="ecDeliverNeedItem" />
+        <result column="ec_need_provide_ethics" property="ecNeedProvideEthics" />
+        <result column="ec_requirement" property="ecRequirement" />
+        <result column="ec_need_upload_electronic" property="ecNeedUploadElectronic" />
+        <result column="ec_electronic_requirement" property="ecElectronicRequirement" />
+        <result column="ec_other_explain" property="ecOtherExplain" />
+        <result column="ec_frequency" property="ecFrequency" />
+        <result column="ec_time_before_meeting" property="ecTimeBeforeMeeting" />
+        <result column="ec_time_after_meeting" property="ecTimeAfterMeeting" />
+        <result column="ec_need_pay_charge" property="ecNeedPayCharge" />
+        <result column="ec_first_meeting_charge" property="ecFirstMeetingCharge" />
+        <result column="ec_next_meeting_charge" property="ecNextMeetingCharge" />
+        <result column="ec_quick_review_charge" property="ecQuickReviewCharge" />
+        <result column="ec_record_charge" property="ecRecordCharge" />
+        <result column="ec_charge_has_tax" property="ecChargeHasTax" />
+        <result column="ec_charge_tax" property="ecChargeTax" />
+        <result column="ec_invoice_type" property="ecInvoiceType" />
+        <result column="ec_invoice_attachment" property="ecInvoiceAttachment" />
+        <result column="ec_payment_requirement" property="ecPaymentRequirement" />
+        <result column="ec_billed_by" property="ecBilledBy" />
+        <result column="ec_account" property="ecAccount" />
+        <result column="ec_bank" property="ecBank" />
+        <result column="ec_branch" property="ecBranch" />
+        <result column="ec_urban_clearing_bank_no" property="ecUrbanClearingBankNo" />
+        <result column="ec_suburban_clearing_bank_no" property="ecSuburbanClearingBankNo" />
+        <result column="ec_other_requirement" property="ecOtherRequirement" />
+        <result column="create_by" property="createBy" />
+        <result column="create_time" property="createTime" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_time" property="updateTime" />
+        <result column="is_deleted" property="isDeleted" />
+    </resultMap>
+
+</mapper>

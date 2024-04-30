@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.liangyihui.manager.kypt.bos.mapper.AdminEnterpriseWechatMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.liangyihui.manager.kypt.bos.entity.AdminEnterpriseWechat">
+        <id column="id" property="id"/>
+        <result column="enterprise_id" property="enterpriseId"/>
+        <result column="enterprise_wechat_name" property="enterpriseWechatName"/>
+        <result column="chat_corp_id" property="chatCorpId"/>
+        <result column="chat_corp_secret" property="chatCorpSecret"/>
+        <result column="access_token_url" property="accessTokenUrl"/>
+    </resultMap>
+
+    <select id="eChatList" resultType="net.liangyihui.manager.kypt.bos.api.response.common.IdNameEntry">
+        SELECT
+        aew.id AS id,
+        aew.enterprise_wechat_name AS name
+        FROM
+        admin_enterprise_wechat aew
+        <if test ="pUserInfoId != null">
+            inner join patient_user_channel puc on puc.link_id = aew.id
+        </if>
+        WHERE 1=1
+        and aew.enterprise_id = #{enterpriseId}
+        <if test="name != null">
+             AND aew.enterprise_wechat_name LIKE CONCAT( '%',#{name}, '%' )
+        </if>
+        <if test ="pUserInfoId != null">
+             AND puc.p_user_info_id = #{pUserInfoId} and puc.user_status='1' and puc.channel_type='e-chat'
+        </if>
+        GROUP BY
+        id
+    </select>
+
+</mapper>

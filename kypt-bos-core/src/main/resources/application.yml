@@ -1,0 +1,127 @@
+net:
+  liangyihui:
+    kypt:
+      bos:
+        redis:
+          url:
+            redis://127.0.0.1:6379
+          database:
+            0
+      login:
+        expire-minutes: 720
+      db-save:
+        max-batch-size: 1000
+      address: https://demowww.yanzhiquan.net/backend
+      pass-url:
+        - /common/save-work-chat-inner-user
+        - /common/schedule-follow-up
+        - /common/chat-sub-callback
+        - /common/hospital
+        - /common/dept
+        - /common/work-chat-callback
+        - /common/disease
+        - /common/save-yesterday-log
+    default-work-chat-id: 2
+    app:
+      url: https://demowww.yanzhiquan.net/#/
+pagehelper:
+  reasonable: true
+
+#----------server设置-------
+server:
+  port: 8088
+  servlet:
+    context-path: /backend
+  application:
+    name: kypt_bos_service
+    http:
+      encoding:
+        charset: UTF-8
+        enabled: true
+        force: true
+    jackson:
+      date-format: yyy-MM-dd HH:mm:ss
+      time-zone: GMT
+      default-property-inclusion: non_null
+    profiles:
+      active: dev
+#------------spring设置------
+spring:
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    jdbcUrl: jdbc:mysql://demodb.liangyihui.net:3306/lyhdbone?useUnicode=true&useSSL=false&characterEncoding=utf8&amp&zeroDateTimeBehavior=CONVERT_TO_NULL&amp&character_set_connection=utf8mb4&character_set_results=utf8mb4
+#    url: jdbc:mysql://demodb.liangyihui.net:3306/lyhdbone?useUnicode=true&useSSL=false&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&character_set_connection=utf8mb4&character_set_results=utf8mb4
+#    username: root
+#    password: 393ZiccUiUi
+    jdbcUrl: jdbc:mysql://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    url: jdbc:mysql://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    username: sss==
+    password: xxx+r3Xa7HQ==
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 15
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: DatebookHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+      connection-init-sql: SET NAMES utf8mb4 COLLATE UTF8MB4_UNICODE_CI
+  messages:
+    basename: i18n/message
+    encoding: UTF-8
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,env,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+logging:
+  level:
+    net.liangyihui.manager.kypt.bos: debug
+
+qiniu:
+  bucket: user-admin
+  accessKey: xxxx
+  secretKey: xxxx
+  domain: https://uastatic.liangyihui.net/
+  portrait:
+    url: http://7xr5oh.com2.z0.glb.qiniucdn.com/
+
+storage:
+  path: /data/upload
+  type: qiniu
+  tmppath: /tmp/path/upload
+
+schedule.enable: true
+
+env.mode: dev
+
+#mq:
+#  rocket:
+#    httpEndpoint: http://xxx.mqrest.cn-hangzhou.aliyuncs.com
+#    accessKey: xxx
+#    secretKey: xxx
+#    instanceId: MQ_INST_1878934513317392_BXkQO6Lx
+#    topicName: message_chat_message
+#    groupId: GID_DEV_PM_WECHAT_GROUP
+#    targetName: tag_patient_chat_test
+
+#mybatis-plus.configuration.log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
+

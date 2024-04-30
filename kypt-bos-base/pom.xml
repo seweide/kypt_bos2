@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+    <artifactId>kypt-bos</artifactId>
+    <groupId>net.liangyihui.kypt.manager</groupId>
+    <version>1.0.0</version>
+    </parent>
+
+<modelVersion>4.0.0</modelVersion>
+<artifactId>kypt-bos-base</artifactId>
+<version>1.0.0</version>
+
+<dependencies>
+<dependency>
+    <groupId>net.liangyihui.kypt.manager</groupId>
+    <artifactId>kypt-bos-api</artifactId>
+</dependency>
+<dependency>
+    <groupId>com.baomidou</groupId>
+    <artifactId>mybatis-plus-boot-starter</artifactId>
+</dependency>
+<dependency>
+    <groupId>com.github.pagehelper</groupId>
+    <artifactId>pagehelper-spring-boot-starter</artifactId>
+</dependency>
+<dependency>
+    <groupId>net.liangyihui.std</groupId>
+    <artifactId>std-web-common</artifactId>
+    <version>${std.web.common.version}</version>
+    <exclusions>
+        <exclusion>
+            <artifactId>qiniu-java-sdk</artifactId>
+            <groupId>com.qiniu</groupId>
+        </exclusion>
+    </exclusions>
+</dependency>
+
+</dependencies>
+
+</project>

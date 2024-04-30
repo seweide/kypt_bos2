@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.liangyihui.manager.kypt.bos.mapper.AdminEnterpriseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.liangyihui.manager.kypt.bos.entity.AdminEnterprise">
+        <id column="id" property="id" />
+        <result column="enterprise_name" property="enterpriseName" />
+        <result column="enterprise_logo" property="enterpriseLogo" />
+        <result column="enterprise_level" property="enterpriseLevel" />
+        <result column="admin_user_id" property="adminUserId" />
+        <result column="create_b_user_id" property="createBUserId" />
+        <result column="create_time" property="createTime" />
+        <result column="update_b_user_id" property="updateBUserId" />
+        <result column="last_update_time" property="lastUpdateTime" />
+    </resultMap>
+
+</mapper>

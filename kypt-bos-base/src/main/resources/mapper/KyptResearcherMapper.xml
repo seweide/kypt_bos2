@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.liangyihui.manager.kypt.bos.mapper.KyptResearcherMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.liangyihui.manager.kypt.bos.entity.KyptResearcher">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="center_id" property="centerId" />
+        <result column="center_name" property="centerName" />
+        <result column="team_id" property="teamId" />
+        <result column="team_name" property="teamName" />
+        <result column="status" property="status" />
+        <result column="department" property="department" />
+        <result column="type_child" property="typeChild" />
+        <result column="title" property="title" />
+        <result column="major_name" property="majorName" />
+        <result column="duty" property="duty" />
+        <result column="tel" property="tel" />
+        <result column="advantage" property="advantage" />
+        <result column="profile" property="profile" />
+        <result column="consulting_hours" property="consultingHours" />
+        <result column="pic_url" property="picUrl" />
+        <result column="identity_url" property="identityUrl" />
+        <result column="email" property="email" />
+        <result column="address" property="address" />
+        <result column="post_code" property="postCode" />
+        <result column="sort" property="sort" />
+        <result column="create_by" property="createBy" />
+        <result column="create_time" property="createTime" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_time" property="updateTime" />
+        <result column="is_deleted" property="isDeleted" />
+    </resultMap>
+
+</mapper>

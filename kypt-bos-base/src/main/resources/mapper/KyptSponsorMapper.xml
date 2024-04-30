@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.liangyihui.manager.kypt.bos.mapper.KyptSponsorMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.liangyihui.manager.kypt.bos.entity.KyptSponsor">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="pic_url" property="picUrl" />
+        <result column="website" property="website" />
+        <result column="region" property="region" />
+        <result column="source" property="source" />
+        <result column="status" property="status" />
+        <result column="linkman" property="linkman" />
+        <result column="tel" property="tel" />
+        <result column="email" property="email" />
+        <result column="address" property="address" />
+        <result column="post_code" property="postCode" />
+        <result column="cure_area" property="cureArea" />
+        <result column="high_light" property="highLight" />
+        <result column="profile" property="profile" />
+        <result column="rd_url" property="rdUrl" />
+        <result column="sort" property="sort" />
+        <result column="stage" property="stage" />
+        <result column="drug_type" property="drugType" />
+        <result column="targets" property="targets" />
+        <result column="create_by" property="createBy" />
+        <result column="create_time" property="createTime" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_time" property="updateTime" />
+        <result column="is_deleted" property="isDeleted" />
+    </resultMap>
+
+</mapper>

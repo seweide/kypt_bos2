@@ -1,0 +1,76 @@
+spring:
+  profiles: dev
+  datasource:
+    dynamic:
+      druid:
+        initial-size: 20
+        min-idle: 20
+        max-active: 100
+        max-wait: 60000
+        time-between-eviction-runs-millis: 60000
+        min-evictable-idle-time-millis: 300000
+        validation-query: SELECT 1 FROM DUAL
+        test-on-borrow: false
+        test-on-return: false
+        test-while-idle: true
+        pool-prepared-statements: false
+        max-pool-prepared-statement-per-connection-size: 20
+        filters: wall
+        wall:
+          noneBaseStatementAllow: true
+          multiStatementAllow: true
+      datasource:
+        master:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+          username: root
+          password: 393ZiccUiUi
+#        applet:
+#          driver-class-name: com.mysql.cj.jdbc.Driver
+#          url: jdbc:mysql://demodb.liangyihui.net:3306/applet?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
+#          username: root
+#          password: 393ZiccUiUi
+#        business:
+#          driver-class-name: com.mysql.cj.jdbc.Driver
+#          url: jdbc:mysql://demodb.liangyihui.net:3306/lyh_business?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
+#          username: root
+#          password: 393ZiccUiUi
+#        qa:
+#          driver-class-name: com.mysql.cj.jdbc.Driver
+#          url: jdbc:mysql://demodb.liangyihui.net:3306/qa?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
+#          username: root
+#          password: 393ZiccUiUi
+
+
+net:
+  liangyihui:
+    kypt:
+      bos:
+        redis:
+          url:
+            redis://127.0.0.1:6379
+          database:
+            0
+          timeout: 60000
+        jedis:
+          pool:
+            max-active: 200
+            max-wait: 60000
+            max-idle: 20
+            min-idle: 0
+        login:
+          expire-minutes: 120
+
+## ---------------七牛相关配置-----------------
+qiniu:
+  access-key: xxx
+  secret-key: xxx
+  call-back-url: https://demoapi.liangyihui.net/api/pub/qiniucallback
+  bucket:
+    portrait: test
+    portrait.url: https://broadcast.liangyihui.net/
+
+
+
+
+

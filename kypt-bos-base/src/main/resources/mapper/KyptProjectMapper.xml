@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.liangyihui.manager.kypt.bos.mapper.KyptProjectMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.liangyihui.manager.kypt.bos.entity.KyptProject">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="is_iit" property="isIit" />
+        <result column="release_status" property="releaseStatus" />
+        <result column="register_no" property="registerNo" />
+        <result column="status" property="status" />
+        <result column="first_public_time" property="firstPublicTime" />
+        <result column="end_time" property="endTime" />
+        <result column="cooperation_way" property="cooperationWay" />
+        <result column="is_consult" property="isConsult" />
+        <result column="group_id" property="groupId" />
+        <result column="drug_name" property="drugName" />
+        <result column="drug_no" property="drugNo" />
+        <result column="drug_type" property="drugType" />
+        <result column="record_no" property="recordNo" />
+        <result column="indication_description" property="indicationDescription" />
+        <result column="pro_subject" property="proSubject" />
+        <result column="common_subject" property="commonSubject" />
+        <result column="scheme_no" property="schemeNo" />
+        <result column="purpose" property="purpose" />
+        <result column="trial_class" property="trialClass" />
+        <result column="stage" property="stage" />
+        <result column="design_type" property="designType" />
+        <result column="random" property="random" />
+        <result column="scope" property="scope" />
+        <result column="blind_method" property="blindMethod" />
+        <result column="patient_age" property="patientAge" />
+        <result column="patient_sex" property="patientSex" />
+        <result column="has_health_patient" property="hasHealthPatient" />
+        <result column="target_enrollment_number" property="targetEnrollmentNumber" />
+        <result column="actual_enrollment_number" property="actualEnrollmentNumber" />
+        <result column="Inclusion_criteria" property="inclusionCriteria" />
+        <result column="exclusion_criteria" property="exclusionCriteria" />
+        <result column="targets" property="targets" />
+        <result column="disease" property="disease" />
+        <result column="is_early_stage" property="isEarlyStage" />
+        <result column="source" property="source" />
+        <result column="create_by" property="createBy" />
+        <result column="create_time" property="createTime" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_time" property="updateTime" />
+        <result column="is_deleted" property="isDeleted" />
+    </resultMap>
+
+</mapper>
